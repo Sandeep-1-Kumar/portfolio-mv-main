@@ -41,7 +41,7 @@ export default function Hero() {
   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}
   
 >
-  5+ years of experience specializing in Backend
+6 years of experience specializing in Backend
 </motion.p>
 
 {/* Bullet Points Section */}
