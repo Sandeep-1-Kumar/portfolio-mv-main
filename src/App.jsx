@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {ArrowRight,ArrowUpRight, Github,Linkedin,Mail,Menu,X,Code2,Server,Database,Cloud,ShieldCheck,Award,GraduationCap,ExternalLink} from 'lucide-react';
-import portrait from './assets/sandeep.png';
+import portrait from './assets/professional-headshot.svg';
 import polyglot from './assets/Polyglot.png';
 import flavor from './assets/IFS.jpg';
 import ofs from './assets/OFS.jpg';
