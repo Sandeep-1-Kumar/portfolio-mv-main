@@ -970,8 +970,8 @@ a:focus-visible, button:focus-visible {
 .portrait-card { width: min(328px, 78%); padding: .7rem; border-radius: 29px; }
 .portrait-card::before { inset: 10px; border-radius: 22px; }
 .portrait-image { border-radius: 22px; }
-.ring-one { width: 355px; height: 355px; top: 18px; right: 50%; transform: translateX(50%); }
-.ring-two { width: 405px; height: 405px; top: -7px; right: 50%; transform: translateX(50%); }
+.ring-one { width: 355px; height: 355px; top: 18px; left: 50%; right: auto; transform: translateX(-50%); }
+.ring-two { width: 405px; height: 405px; top: -7px; left: 50%; right: auto; transform: translateX(-50%); }
 .floating-card {
   max-width: 165px;
   padding: .7rem .85rem;
