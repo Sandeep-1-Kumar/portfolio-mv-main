@@ -855,3 +855,59 @@ button {
     align-items: flex-start;
   }
 }
+
+
+/* Motion and interaction polish */
+@keyframes ambientDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(24px, -20px, 0) scale(1.08); }
+}
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  from { transform: translateX(-130%) rotate(15deg); }
+  to { transform: translateX(290%) rotate(15deg); }
+}
+.ambient-one { animation: ambientDrift 18s ease-in-out infinite; }
+.ambient-two { animation: ambientDrift 23s ease-in-out infinite reverse; }
+.hero-copy { animation: revealUp .75s both; }
+.hero-visual { animation: revealUp .9s .1s both; }
+.floating-card { animation: softFloat 5s ease-in-out infinite; }
+.card-right { animation-delay: -2.4s; }
+.floating-mini { animation: softFloat 7s ease-in-out infinite; }
+.mini-bottom { animation-delay: -3.3s; }
+.portrait-card::after {
+  content: '';
+  position: absolute;
+  top: -35%; left: -45%;
+  width: 22%; height: 160%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.065), transparent);
+  transform: translateX(-130%) rotate(15deg);
+  animation: shimmer 10s ease-in-out infinite;
+}
+.feature-card, .timeline-content, .project-card, .skill-card, .education-card, .stat-card {
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.feature-card:hover, .timeline-content:hover, .project-card:hover, .skill-card:hover, .education-card:hover, .stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(114,244,207,.38);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, .37), 0 0 28px rgba(114,244,207,.04);
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ambient, .hero-copy, .hero-visual, .floating-card, .floating-mini, .portrait-card::after {
+    animation: none !important;
+  }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
