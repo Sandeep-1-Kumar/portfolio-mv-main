@@ -275,17 +275,18 @@ export default function App() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="hero-pill">
-                <Sparkles size={15} /> Java Full Stack Developer
+                <Sparkles size={15} /> JAVA FULL STACK DEVELOPER · 8 YEARS
               </span>
               <h1>
-                Building <span>scalable software</span> with clean architecture, polished user
-                experience and production-grade engineering.
+                I build software <span>that scales.</span>
               </h1>
               <p>
-                I’m <strong>{user}</strong> — a Java Full Stack Developer with <strong>8 years of experience</strong>
-                creating enterprise applications using Java, Spring Boot, React.js, cloud services and
-                event-driven systems.
+                Hi, I’m <strong>{user}</strong>. I turn complex business needs into reliable,
+                intuitive applications using Java, Spring Boot, React and cloud technologies.
               </p>
+              <div className="hero-stack" aria-label="Core technologies">
+                <span>Java</span><span>Spring Boot</span><span>React</span><span>Microservices</span>
+              </div>
 
               <div className="hero-actions">
                 <a className="button primary" href="#projects">
