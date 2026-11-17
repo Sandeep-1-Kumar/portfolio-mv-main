@@ -19,6 +19,7 @@ import {
   X,
 } from 'lucide-react';
 
+import './career.css';
 import portrait from './assets/professional-headshot-clear.svg';
 import polyglot from './assets/Polyglot.png';
 import flavor from './assets/IFS.jpg';
@@ -37,22 +38,34 @@ const nav = ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Contact'
 const stats = [
   { value: '8+', label: 'Years of experience' },
   { value: '10M+', label: 'Customers supported' },
-  { value: '40K+', label: 'Shipments tracked daily' },
+  { value: '40K+', label: 'Customers served daily by tracking' },
   { value: '60%', label: 'Performance improvement' },
 ];
 
 const jobs = [
   {
-    role: 'Software Developer III',
-    company: 'Infosys USA · Charter Communications',
-    date: 'Jan 2024 – Present',
+    role: 'Forward Deployed Engineer (Full Stack + SRE)',
+    company: 'JPMorganChase · Client engagement',
+    date: 'Nov 2026 – Present',
     bullets: [
-      'Built Java Spring Boot services and React-integrated features for Spectrum Mobile workflows serving 10+ million customers.',
-      'Delivered end-to-end shipment tracking for 40,000+ customers daily and improved operational efficiency by 80%.',
-      'Reduced pricing discrepancies by 35% and promotion-related issues by 50%+ through cart and eligibility integrations.',
-      'Improved system performance by 60% using asynchronous and parallel Java processing while modernizing services from Java 11 to Java 17.',
+      'New engagement focused on full-stack software engineering and site reliability in financial technology.',
+      'Engineering priorities include performance, security, modularity, deployability, observability and production reliability.',
     ],
-    tech: ['Java 17', 'Spring Boot', 'React', 'Kafka', 'Oracle', 'MongoDB', 'Redis'],
+    tech: ['Full Stack', 'SRE', 'Reliability', 'Performance', 'Security', 'Deployability'],
+  },
+  {
+    role: 'Software Developer',
+    company: 'Spectrum Mobile · Client engagement',
+    date: 'Jan 2024 – Nov 2026',
+    bullets: [
+      'Developed Java and Spring Boot services supporting cart, enrollment, fulfillment and trade-in workflows across a mobile platform serving 10M+ customers.',
+      'Modernized FedEx and CTDI shipment-tracking integrations from SOAP to REST, evolving toward webhook-driven events; supported real-time tracking for 40K+ customers daily and improved operational efficiency by 80%.',
+      'Built cart, promotion, eligibility and Amdocs billing integrations, helping reduce pricing discrepancies by 35% and promotion-related issues by more than 50%.',
+      'Delivered Assurant insurance and Post-Purchase Trade-In (PPTI) workflows with validation, shipment status and billing reconciliation.',
+      'Improved service performance by up to 60% with asynchronous and parallel Java processing, and contributed to Java 11-to-17 modernization.',
+      'Supported thousands of lower-environment fixes, application enhancements and deployments across development and release cycles.',
+    ],
+    tech: ['Java 17', 'Spring Boot', 'REST / Webhooks', 'Kafka', 'Oracle', 'MongoDB', 'Redis'],
   },
   {
     role: 'Lead Software Developer Intern',
@@ -157,6 +170,37 @@ const projects = [
   },
 ];
 
+const professionalProjects = [
+  {
+    category: 'Integration modernization',
+    title: 'FedEx & CTDI Shipment Tracking',
+    description: 'Evolved shipment integrations from SOAP services to REST APIs and toward webhook-driven status updates, connecting delivery events with customer notifications and downstream systems.',
+    impact: '80% improvement in operational efficiency · 40K+ customers daily',
+    tech: ['SOAP → REST → Webhooks', 'Java', 'Spring Boot', 'Event-driven integration'],
+  },
+  {
+    category: 'Commerce platform',
+    title: 'Spectrum Mobile Cart & Enrollment',
+    description: 'Built performance-sensitive cart operations and integrations across product catalog, eligibility, promotions, caching and Amdocs billing.',
+    impact: '35% fewer pricing discrepancies · 50%+ fewer promotion issues',
+    tech: ['REST APIs', 'Redis', 'Amdocs', 'Enterprise integration'],
+  },
+  {
+    category: 'Customer lifecycle',
+    title: 'Assurant & Post-Purchase Trade-In',
+    description: 'Developed insurance, upgrades and PPTI workflows encompassing IMEI validation, return shipment tracking, trade-in status synchronization and billing reconciliation.',
+    impact: 'Complex multi-system workflows delivered',
+    tech: ['Java', 'Microservices', 'Assurant', 'Trade-In'],
+  },
+  {
+    category: 'Platform engineering',
+    title: 'Java Modernization & Performance',
+    description: 'Modernized Java 11 services to Java 17, used parallel and asynchronous processing to improve throughput, and supported large volumes of fixes, enhancements and deployments.',
+    impact: 'Up to 60% service performance improvement',
+    tech: ['Java 17', 'Concurrency', 'Spring Boot', 'Release engineering'],
+  },
+];
+
 const skills = [
   {
     title: 'Backend Engineering',
@@ -182,6 +226,11 @@ const skills = [
     title: 'Security & Quality',
     icon: ShieldCheck,
     items: ['OAuth2', 'JWT', 'RBAC', 'JUnit', 'Mockito', 'JaCoCo', 'SonarQube', 'JMeter'],
+  },
+  {
+    title: 'SRE & Production Reliability',
+    icon: ShieldCheck,
+    items: ['Observability', 'Incident troubleshooting', 'Performance optimization', 'Deployment readiness', 'Production support', 'Reliability engineering'],
   },
   {
     title: 'Engineering Workflow',
@@ -275,17 +324,19 @@ export default function App() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <span className="hero-pill">
-                <Sparkles size={15} /> JAVA FULL STACK DEVELOPER · 8 YEARS
+                <Sparkles size={15} /> FORWARD DEPLOYED ENGINEER · FULL STACK + SRE
               </span>
               <h1>
-                I build software <span>that scales.</span>
+                Building systems <span>that scale and endure.</span>
               </h1>
               <p>
-                Hi, I’m <strong>{user}</strong>. I turn complex business needs into reliable,
-                intuitive applications using Java, Spring Boot, React and cloud technologies.
+                Hi, I’m <strong>{user}</strong>, a Forward Deployed Engineer working on
+                <strong> full-stack engineering and site reliability</strong> in a JPMorganChase
+                engagement. I build scalable Java and Spring Boot services, distributed
+                integrations and dependable software systems.
               </p>
               <div className="hero-stack" aria-label="Core technologies">
-                <span>Java</span><span>Spring Boot</span><span>React</span><span>Microservices</span>
+                <span>Java</span><span>Spring Boot</span><span>Full Stack</span><span>SRE</span><span>Distributed Systems</span>
               </div>
 
               <div className="hero-actions">
@@ -318,14 +369,14 @@ export default function App() {
               </div>
               <div className="floating-card card-left">
                 <span>Focus</span>
-                <strong>Java · Spring Boot · React</strong>
+                <strong>Full Stack · Java · Spring Boot</strong>
               </div>
               <div className="floating-card card-right">
                 <span>Core strength</span>
-                <strong>Enterprise systems & integrations</strong>
+                <strong>Performance · Reliability · Security</strong>
               </div>
-              <div className="floating-mini mini-top">Cloud + APIs + Messaging</div>
-              <div className="floating-mini mini-bottom">Production-ready engineering</div>
+              <div className="floating-mini mini-top">APIs + Kafka + Messaging</div>
+              <div className="floating-mini mini-bottom">Modularity + Deployability</div>
             </div>
           </div>
 
@@ -344,7 +395,7 @@ export default function App() {
             <SectionHeader
               eyebrow="About"
               title="Engineering with clarity, scale and impact"
-              description="I enjoy transforming complex business workflows into dependable software products with strong backend foundations and clean full-stack delivery."
+              description="Forward Deployed Engineer focused on full-stack development and SRE, with a track record in enterprise integrations, system modernization and measurable production impact."
             />
             <div className="feature-grid">
               <article className="feature-card">
@@ -360,9 +411,9 @@ export default function App() {
                 </p>
               </article>
               <article className="feature-card">
-                <h3>Delivery focus</h3>
+                <h3>Reliability by design</h3>
                 <p>
-                  I care about measurable outcomes — performance, reliability, automation, testability and production support.
+                  I prioritize performance, security, modularity and deployability, supported by observability, testing and production ownership.
                 </p>
               </article>
             </div>
@@ -408,8 +459,32 @@ export default function App() {
             <SectionHeader
               eyebrow="Projects"
               title="Selected work"
-              description="Hands-on projects that reflect my full-stack background, interest in product thinking and love for well-structured code."
+              description="Enterprise engineering work alongside independent projects that showcase full-stack development and systems thinking."
             />
+            <div className="professional-heading">
+              <span className="eyebrow">Professional engineering</span>
+              <h3>Systems I helped build and modernize</h3>
+              <p>Selected enterprise contributions. These systems are proprietary and their source code is not public.</p>
+            </div>
+            <div className="professional-grid">
+              {professionalProjects.map((project) => (
+                <article className="professional-card" key={project.title}>
+                  <div className="professional-card-top">
+                    <span>{project.category}</span>
+                    <ArrowUpRight size={20} aria-hidden="true" />
+                  </div>
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                  <div className="professional-impact">{project.impact}</div>
+                  <TagList items={project.tech} />
+                </article>
+              ))}
+            </div>
+            <div className="professional-heading open-source-heading">
+              <span className="eyebrow">Personal & academic work</span>
+              <h3>Open-source projects</h3>
+              <p>Explore the repositories behind these independent projects.</p>
+            </div>
             <div className="project-grid">
               {projects.map((project) => (
                 <article className="project-card" key={project.title}>
@@ -493,7 +568,7 @@ export default function App() {
               <span className="eyebrow">Contact</span>
               <h2>Let’s build something meaningful.</h2>
               <p>
-                If you’re hiring for backend, full-stack or integration-focused roles, I’d be glad to connect.
+                Interested in full-stack engineering, reliable distributed systems or enterprise integrations? I’d love to connect and exchange ideas.
               </p>
             </div>
             <div className="contact-actions">
@@ -517,7 +592,7 @@ export default function App() {
       <footer className="footer">
         <div className="container footer-inner">
           <span>© {new Date().getFullYear()} {user}</span>
-          <span>Java Full Stack Developer · Built with React</span>
+          <span>Forward Deployed Engineer · Full Stack + SRE · Built with React</span>
           <a href="#home">Back to top ↑</a>
         </div>
       </footer>
